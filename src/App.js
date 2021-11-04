@@ -22,7 +22,7 @@ class App extends React.Component{
         <Route exact path="/bookRoom/:hotel" render={(props)=><BookRoom {...props} />} />
         <Route exact path="/bookings" component={Bookings} />
         <Route exact path="/reschedule/:bookid" render={(props)=><Reschedule {...props} />} />
-        <Route exact path="/review" component={ReviewPage} />
+        <Route exact path="/review/:hotel" component={ReviewPage} />
       </Switch>
     );
   }
