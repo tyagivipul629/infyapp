@@ -7,8 +7,7 @@ import Hotels from './components/Hotels';
 import BookRoom from './components/BookRoom';
 import Bookings from './components/Bookings';
 import Reschedule from './components/Reschedule';
-import AddReview from './components/AddReview';
-import ViewReview from './components/ViewReview';
+import ReviewPage from './components/ReviewPage/index';
 import './App.css';
 
 class App extends React.Component{
@@ -23,8 +22,7 @@ class App extends React.Component{
         <Route exact path="/bookRoom/:hotel" render={(props)=><BookRoom {...props} />} />
         <Route exact path="/bookings" component={Bookings} />
         <Route exact path="/reschedule/:bookid" render={(props)=><Reschedule {...props} />} />
-        <Route exact path="/addReview/:hotel" render={(props)=><AddReview {...props} />} />
-        <Route exact path="/viewReview/:hotel" render={(props)=><ViewReview {...props} />} />
+        <Route exact path="/review" component={ReviewPage} />
       </Switch>
     );
   }
