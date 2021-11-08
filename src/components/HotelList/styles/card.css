@@ -1,0 +1,142 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 2.6rem;
+}
+
+li,
+button,
+label,
+input,
+p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.7rem;
+}
+
+h2 {
+  font-size: 4.2rem;
+}
+
+h3 {
+  font-size: 3rem;
+  font-weight: normal;
+}
+
+h4,
+h5 {
+  font-size: 2.8rem;
+}
+
+nav {
+  min-height: 10vh;
+}
+
+.hero {
+  min-height: 90vh;
+  background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.8)),
+      to(transparent)
+    ),
+    url("./BackgroundImage-card.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.8), transparent),
+    url("./BackgroundImage-card.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.hero .card {
+  margin-top: 5rem;
+  width: 90rem;
+  height: 20rem;
+  background-color: #eae7e7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 1rem;
+  -webkit-box-shadow: -1px 20px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: -1px 20px 20px rgba(0, 0, 0, 0.25);
+}
+
+.hero .card .logo {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 20rem;
+  flex: 1 1 20rem;
+  margin: 0.5rem;
+  height: 18rem;
+  width: 1rem;
+  border-radius: 50%;
+  border-style: solid;
+}
+
+.hero .card .card-text {
+  margin-left: 2rem;
+  color: #836960;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 50rem;
+  flex: 1 1 50rem;
+  font-weight: 500;
+}
+
+.hero .card .card-text h2 {
+  margin: 0.4rem;
+}
+
+.hero .card .card-text p {
+  margin: 0.5rem;
+}
+
+.hero .card .card-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 16rem;
+  flex: 1 1 16rem;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.hero .card .card-button button {
+  background-color: #836960;
+  color: white;
+  border-style: none;
+  width: 15rem;
+  height: 3.5rem;
+  border-radius: 1rem;
+}
+/*# sourceMappingURL=style.css.map */

@@ -75,7 +75,7 @@ const ReviewPage = () => {
       </nav>
       <main>
         <div className="card">
-          {loading ? (
+          { loading ? (
             <h1>Loading</h1>
           ) : (
             <>
@@ -85,37 +85,37 @@ const ReviewPage = () => {
                     <img
                       width="150px"
                       height="150px"
-                      src={image}
+                      src={ image }
                       alt="image"
                     ></img>
                   </div>
                   <div className="data-cont">
-                    <div className="hname display-6">{hotel.hotelName}</div>
-                    <div className="amen">{hotel.amenities}</div>
+                    <div className="hname display-6">{ hotel.hotelName }</div>
+                    <div className="amen">{ hotel.amenities }</div>
                     <div className="addres">
-                      Contact : <em>{hotel.phoneNo}</em> <br /> Address :
-                      {hotel.address}
+                      Contact : <em>{ hotel.phoneNo }</em> <br /> Address :
+                      { hotel.address }
                     </div>
                   </div>
                 </div>
               </section>
               <section className="add-review">
                 <form
-                  onSubmit={(e) => {
+                  onSubmit={ (e) => {
                     submit(e);
-                  }}
+                  } }
                 >
                   <div>
                     <textarea
                       placeholder="Add review here"
-                      maxLength={200}
+                      maxLength={ 200 }
                       required
-                      minLength={3}
-                      value={review}
-                      onChange={(e) => {
+                      minLength={ 3 }
+                      value={ review }
+                      onChange={ (e) => {
                         setReview(e.target.value);
-                      }}
-                      rows={2}
+                      } }
+                      rows={ 2 }
                       id="review-id"
                       name="review"
                     ></textarea>
@@ -128,16 +128,16 @@ const ReviewPage = () => {
                 </form>
                 <hr />
                 <div className="reviews">
-                  {"Customer Reviews:"}
+                  { "Customer Reviews:" }
                   <ul className="review-list">
-                    {hotel.reviews.map((hotel, i) => {
-                      return <li key={i}>{hotel}</li>;
-                    })}
+                    { hotel.reviews.map((hotel, i) => {
+                      return <li key={ i }>{ hotel }</li>;
+                    }) }
                   </ul>
                 </div>
               </section>
             </>
-          )}
+          ) }
         </div>
       </main>
     </>
