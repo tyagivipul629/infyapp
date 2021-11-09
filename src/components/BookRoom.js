@@ -139,6 +139,31 @@ const BookRoom = (props) => {
     });
     console.log(userDetails);
 
+    fetch("http://localhost:1111/bookings", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        CustomerId: `B-00${userDetails.length}`,
+        FirstName: firstNameValue,
+        Lastname: lastNameValue,
+        EmailId: emailValue,
+        HotelName: "Paradise Stay",
+        PersonsBooked: noOfPersonsValue,
+        RoomsBooked: noOfRoomsValue,
+        DateofBooking: startDateValue,
+        DateofLeaving: endDateValue,
+        RoomType: roomTypeValue,
+      }),
+    })
+      .then((res) => {
+        if (res.status == 201) alert("Booking Successful!");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
     resetFirstName();
     resetLastName();
     resetEmail();
