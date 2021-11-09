@@ -1,11 +1,11 @@
-import { useState } from 'react';
-import useInput from '../hooks/use-input';
-import { userDetails } from './BookRoom';
-
+import { useState } from "react";
+import { Redirect } from "react-router";
+import useInput from "../hooks/use-input";
+import { userDetails } from "./BookRoom";
 var startDate;
 
-const isEmail = value => value.includes('@');
-const isStartDate = value => {
+const isEmail = (value) => value.includes("@");
+const isStartDate = (value) => {
   startDate = new Date(value);
   startDate.setHours(0, 0, 0, 0);
   var today = new Date();
@@ -16,7 +16,7 @@ const isStartDate = value => {
     return false;
   }
 };
-const isEndDate = value => {
+const isEndDate = (value) => {
   var endDate = new Date(value);
   endDate.setHours(0, 0, 0, 0);
   if (endDate >= startDate) {
@@ -26,7 +26,7 @@ const isEndDate = value => {
   }
 };
 
-const Reschedule = props => {
+const Reschedule = (props) => {
   const [isEmailIdExist, setIsEmailIdExist] = useState(false);
   const {
     value: emailValue,
@@ -61,12 +61,12 @@ const Reschedule = props => {
     formIsValid = true;
   }
 
-  const submitHandler = event => {
+  const submitHandler = (event) => {
     event.preventDefault();
 
     var counter = 0;
 
-    userDetails.forEach(cur => {
+    userDetails.forEach((cur) => {
       if (cur.EmailId === emailValue) {
         cur.DateofBooking = startDateValue;
         cur.DateofLeaving = endDateValue;
@@ -80,7 +80,7 @@ const Reschedule = props => {
     }
 
     setIsEmailIdExist(false);
-    console.log('Submitted!');
+    console.log("Submitted!");
     console.log(userDetails);
 
     resetEmail();
@@ -88,15 +88,16 @@ const Reschedule = props => {
     resetEndDate();
   };
 
-  const emailClasses = emailHasError ? 'form-control invalid' : 'form-control';
+  const emailClasses = emailHasError ? "form-control invalid" : "form-control";
 
   const startDateClasses = startDateHasError
-    ? 'form-control invalid'
-    : 'form-control';
+    ? "form-control invalid"
+    : "form-control";
 
   const endDateClasses = endDateHasError
-    ? 'form-control invalid'
-    : 'form-control';
+    ? "form-control invalid"
+    : "form-control";
+  if (!props.isLoggedin) return <Redirect to="/login" />;
 
   return (
     <>

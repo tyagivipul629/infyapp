@@ -45,7 +45,7 @@ nav {
   min-height: 10vh;
 }
 
-.card {
+.hotel-card {
   margin-top: 5rem;
   width: 90rem;
   height: 20rem;
@@ -58,7 +58,7 @@ nav {
   box-shadow: -1px 20px 20px rgba(0, 0, 0, 0.25);
 }
 
-.card .logo {
+.hotel-card .logo {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 20rem;
   flex: 1 1 20rem;
@@ -69,7 +69,7 @@ nav {
   border-style: solid;
 }
 
-.card .card-text {
+.hotel-card .card-text {
   margin-left: 2rem;
   color: #836960;
   -webkit-box-flex: 1;
@@ -78,15 +78,15 @@ nav {
   font-weight: 500;
 }
 
-.card .card-text h2 {
+.hotel-card .card-text h2 {
   margin: 0.4rem;
 }
 
-.card .card-text p {
+.hotel-card .card-text p {
   margin: 0.5rem;
 }
 
-.card .card-button {
+.hotel-card .card-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -104,7 +104,7 @@ nav {
   justify-content: space-around;
 }
 
-.card .card-button button {
+.hotel-card .card-button button {
   background-color: #836960;
   color: white;
   border-style: none;

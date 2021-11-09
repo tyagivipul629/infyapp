@@ -1,13 +1,14 @@
-import useInput from '../hooks/use-input';
+import { Redirect } from "react-router";
+import useInput from "../hooks/use-input";
 
 var startDate;
 const userDetails = [];
 
-const isNotEmpty = value => value.trim() !== '';
-const isEmail = value => value.includes('@');
-const isNoOfPersons = value => value > 0 && value <= 5;
-const isNoOfRooms = value => value > 0 && value <= 3;
-const isStartDate = value => {
+const isNotEmpty = (value) => value.trim() !== "";
+const isEmail = (value) => value.includes("@");
+const isNoOfPersons = (value) => value > 0 && value <= 5;
+const isNoOfRooms = (value) => value > 0 && value <= 3;
+const isStartDate = (value) => {
   startDate = new Date(value);
   startDate.setHours(0, 0, 0, 0);
   var today = new Date();
@@ -18,7 +19,7 @@ const isStartDate = value => {
     return false;
   }
 };
-const isEndDate = value => {
+const isEndDate = (value) => {
   var endDate = new Date(value);
   endDate.setHours(0, 0, 0, 0);
   if (endDate >= startDate) {
@@ -28,7 +29,7 @@ const isEndDate = value => {
   }
 };
 
-const BookRoom = props => {
+const BookRoom = (props) => {
   const {
     value: firstNameValue,
     isValid: firstNameIsValid,
@@ -116,20 +117,20 @@ const BookRoom = props => {
     formIsValid = true;
   }
 
-  const submitHandler = event => {
+  const submitHandler = (event) => {
     event.preventDefault();
 
     if (!formIsValid) {
       return;
     }
 
-    console.log('Submitted!');
+    console.log("Submitted!");
     userDetails.push({
       CustomerId: `B-00${userDetails.length}`,
       FirstName: firstNameValue,
       Lastname: lastNameValue,
       EmailId: emailValue,
-      HotelName: 'Paradise Stay',
+      HotelName: "Paradise Stay",
       PersonsBooked: noOfPersonsValue,
       RoomsBooked: noOfRoomsValue,
       DateofBooking: startDateValue,
@@ -149,34 +150,35 @@ const BookRoom = props => {
   };
 
   const firstNameClasses = firstNameHasError
-    ? 'form-control invalid'
-    : 'form-control';
+    ? "form-control invalid"
+    : "form-control";
 
   const lastNameClasses = lastNameHasError
-    ? 'form-control invalid'
-    : 'form-control';
+    ? "form-control invalid"
+    : "form-control";
 
-  const emailClasses = emailHasError ? 'form-control invalid' : 'form-control';
+  const emailClasses = emailHasError ? "form-control invalid" : "form-control";
 
   const noOfPersonsClasses = noOfPersonsHasError
-    ? 'form-control invalid'
-    : 'form-control';
+    ? "form-control invalid"
+    : "form-control";
 
   const noOfRoomsClasses = noOfRoomsHasError
-    ? 'form-control invalid'
-    : 'form-control';
+    ? "form-control invalid"
+    : "form-control";
 
   const startDateClasses = startDateHasError
-    ? 'form-control invalid'
-    : 'form-control';
+    ? "form-control invalid"
+    : "form-control";
 
   const endDateClasses = endDateHasError
-    ? 'form-control invalid'
-    : 'form-control';
+    ? "form-control invalid"
+    : "form-control";
 
   const roomTypeClasses = roomTypeHasError
-    ? 'form-control invalid'
-    : 'form-control';
+    ? "form-control invalid"
+    : "form-control";
+  if (!props.isLoggedin) return <Redirect to="/login" />;
 
   return (
     <>

@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap");
 
 * {
   box-sizing: border-box;
 }
 
 html {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 body {
   height: 100%;
   margin: 0;
-  background-color: #3f3f3f;
+  background: linear-gradient(to right, #3bf497, #9fe1ff);
 }
 
 h1 {
@@ -117,4 +117,3 @@ button:disabled:active {
 .error-text {
   color: #b40e0e;
 }
-
