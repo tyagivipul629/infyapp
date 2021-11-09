@@ -1,0 +1,149 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Maria",
+      "address": "Bangalore,Karnataka",
+      "email": "maria@gmail.com",
+      "phoneNo": 1234567890,
+      "password": "maria123456"
+    },
+    {
+      "name": "Setna",
+      "address": "Bangalore",
+      "phoneNo": "1234567890",
+      "email": "setna@gmail.com",
+      "password": "Setna@123",
+      "id": 2
+    },
+    {
+      "name": "Sera",
+      "address": "bangalore",
+      "phoneNo": "1234567890",
+      "email": "sera@gmail.com",
+      "password": "Sera@1234",
+      "id": 3
+    },
+    {
+      "name": "Daisy",
+      "address": "Bangalore",
+      "phoneNo": "1234567890",
+      "email": "daisy@gmail.com",
+      "password": "Daisy@123",
+      "id": 4
+    }
+  ],
+  "hotels": [
+    {
+      "id": 1,
+      "hotelName": "Paradise Stay",
+      "city": "Bangalore",
+      "description": "A home to relax at the 'city' peek with all the facilities near you",
+      "amenities": "Different Cuisine Food, Swimming Pool, Self Cooking Station",
+      "phoneNo": 9090909090,
+      "address": "120/1C, Bangalore, Karnataka",
+      "imageUrl": "2.jpg",
+      "reviews": [
+        "Good Accomodation",
+        "Best place to relax with friends and family",
+        "The best place to chill with friends. ",
+        "The best place I ever visited."
+      ]
+    },
+    {
+      "id": 2,
+      "hotelName": "Hill Palace",
+      "city": "Kochi",
+      "description": "A cool place to relax at Lake side",
+      "amenities": "Homely Food, Sea Food, Children's Park, Boating",
+      "phoneNo": 9191919191,
+      "address": "90/1A, Kochi, Kerala",
+      "imageUrl": "3.jpg",
+      "reviews": [
+        "Must visit place. The cuisine available here is so amazing.",
+        "My favorite place to relax on my vacations"
+      ]
+    },
+    {
+      "id": 3,
+      "hotelName": "Monsoon Stay",
+      "city": "Chennai",
+      "description": "A luxurious but affordable stay as in your home",
+      "amenities": "24 hr Homely Food, Security, Children's Park",
+      "phoneNo": 9292929292,
+      "address": "100/1A, Chennai, Tamil Nadu",
+      "imageUrl": "4.jpg",
+      "reviews": []
+    },
+    {
+      "id": 4,
+      "hotelName": "Galaxy Paradise",
+      "city": "Mumbai",
+      "description": "An affordable family stay spot at the 'City' heart",
+      "amenities": "24 hr Homely Food, Swimming Pool, Security",
+      "phoneNo": 9393939393,
+      "address": "190/1B, Mumbai, Maharastra",
+      "imageUrl": "5.jpg",
+      "reviews": []
+    }
+  ],
+  "bookings": [
+    {
+      "id": 1,
+      "startDate": "2020-09-22",
+      "endDate": "2020-09-27",
+      "noOfPersons": 1,
+      "noOfRooms": 1,
+      "typeOfRoom": "AC",
+      "hotelName": "Paradise Stay",
+      "hotelId": 1,
+      "userId": 1
+    },
+    {
+      "startDate": "2020-09-23",
+      "endDate": "2020-09-24",
+      "noOfPersons": 1,
+      "noOfRooms": 1,
+      "typeOfRoom": "AC",
+      "hotelId": 1,
+      "hotelName": "Paradise Stay",
+      "userId": 1,
+      "id": 2,
+      "bookingId": "2"
+    },
+    {
+      "startDate": "2020-09-30",
+      "endDate": "2020-10-01",
+      "noOfPersons": 1,
+      "noOfRooms": 1,
+      "typeOfRoom": "AC",
+      "hotelId": 1,
+      "hotelName": "Paradise Stay",
+      "userId": 2,
+      "id": 3
+    },
+    {
+      "startDate": "2020-10-01",
+      "endDate": "2020-10-02",
+      "noOfPersons": 1,
+      "noOfRooms": 1,
+      "typeOfRoom": "AC",
+      "hotelId": 1,
+      "hotelName": "Paradise Stay",
+      "userId": 2,
+      "id": 4,
+      "bookingId": "4"
+    },
+    {
+      "startDate": "2020-09-25",
+      "endDate": "2020-09-26",
+      "noOfPersons": 1,
+      "noOfRooms": 1,
+      "typeOfRoom": "AC",
+      "hotelId": 2,
+      "hotelName": "Hill Palace",
+      "userId": 2,
+      "id": 5
+    }
+  ]
+}
