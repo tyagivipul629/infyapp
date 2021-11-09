@@ -1,19 +1,43 @@
 @import "variables";
 
-#mainContainer{
-    margin-top: 100px;
+.hero{
+
+    
+    height:90vh;
+    h1{
+        font-size:30rem;
+        color:white;
+        margin-top:5rem;
+        animation: textAnimation 2s infinite alternate ease-in-out;
+    }
+
+    pre{
+        font-size:2rem;
+        color:white;
+        margin-top:6rem;
+        
+    }
 }
+
+
 
 .para{
-    font-family: $secondary_font;
-    background-image: url('../assets/images/background1.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    font-size: 30px;
-    padding: 20px;
-    font-weight: 600;
-    color: $navbar_color;
-    border: 10px solid transparent;
-    border-image: url('../assets/images/border.png') 30 stretch;
+    // font-family: $secondary_font;
+    // background-image: url('../assets/images/background1.jpg');
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    // font-size: 30px;
+    // padding: 20px;
+    // font-weight: 600;
+    // color: $navbar_color;
+    // border: 10px solid transparent;
+    // border-image: url('../assets/images/border.png') 30 stretch;
 }
-
+@keyframes textAnimation {
+  from {
+    transform: translate(10%, -10%);
+  }
+  to {
+    transform: translate(0%, 0%);
+  }
+}

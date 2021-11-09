@@ -1,0 +1,116 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 2.6rem;
+}
+
+li,
+button,
+label,
+input,
+p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.7rem;
+}
+
+h2 {
+  font-size: 4.2rem;
+}
+
+h3 {
+  font-size: 3rem;
+  font-weight: normal;
+}
+
+h4,
+h5 {
+  font-size: 2.8rem;
+}
+
+nav {
+  min-height: 10vh;
+  background-color: black;
+}
+
+.hero {
+  min-height: 90vh;
+  background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.8)),
+      to(transparent)
+    ),
+    url("./BackgroundImage-card.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.8), transparent),
+    url("../components/HotelList/styles/BackgroundImage-card.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.hero .card {
+  background-color: #eae7e7;
+  margin: 4rem;
+  width: 40vh;
+  height: 45vh;
+  -webkit-box-shadow: -1px 20px 20px rgba(0, 0, 0, 0.95);
+  box-shadow: -1px 20px 20px rgba(0, 0, 0, 0.95);
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.hero .card h3 {
+  font-size: 3rem;
+  color: #836960;
+  font-family: cursive;
+  font-weight: 600;
+  padding-top: 2rem;
+}
+
+.hero .card h4 {
+  font-size: 2rem;
+  color: #836960;
+  font-weight: 500;
+  padding-top: 2rem;
+}
+
+.hero .card button {
+  margin-top: 3rem;
+  background-color: #836960;
+  color: white;
+  border-style: none;
+  width: 15rem;
+  height: 3.5rem;
+  border-radius: 1rem;
+}
+/*# sourceMappingURL=Booking.css.map */

@@ -1,0 +1,104 @@
+/* Global Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 2.6rem;
+}
+li,
+button,
+label,
+input,
+p {
+  font-family: "Poppins", sans-serif;
+
+  font-size: 1.7rem;
+}
+h2 {
+  font-size: 4.2rem;
+}
+h3 {
+  font-size: 3rem;
+  font-weight: normal;
+}
+h4,
+h5 {
+  font-size: 2.8rem;
+}
+
+nav {
+  min-height: 10vh;
+  background-color: black;
+}
+
+// Variable Declaration
+
+$primary-color: #836960;
+$card-color: #eae7e7;
+
+.hero {
+  min-height: 90vh;
+  background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.8)),
+      to(transparent)
+    ),
+    url("./BackgroundImage-card.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.8), transparent),
+    url("./BackgroundImage-card.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: flex-start;
+
+  .card {
+    background-color: $card-color;
+    margin: 4rem;
+    width: 40vh;
+    height: 45vh;
+    box-shadow: -1px 20px 20px rgba(0, 0, 0, 0.95);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //
+    h3 {
+      font-size: 3rem;
+      color: $primary-color;
+      font-family: cursive;
+      font-weight: 600;
+      padding-top: 2rem;
+    }
+
+    h4 {
+      font-size: 2rem;
+      color: $primary-color;
+
+      font-weight: 500;
+      padding-top: 2rem;
+    }
+    button {
+      margin-top: 3rem;
+      background-color: #836960;
+      color: white;
+      border-style: none;
+      width: 15rem;
+      height: 3.5rem;
+      border-radius: 1rem;
+    }
+  }
+}

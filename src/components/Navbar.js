@@ -33,9 +33,9 @@ const NavBar = ({ isLoggedin, user, logoutUser }) => {
                 <Nav.Link as={Link} to="/bookings">
                   Bookings
                 </Nav.Link>
-                <Button id="logout" onClick={logoutUser}>
+                <Nav.Link id="logout" onClick={logoutUser}>
                   Logout
-                </Button>
+                </Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </>

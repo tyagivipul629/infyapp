@@ -1,10 +1,11 @@
 @import 'variables';
 
 #navbar{
+    height:10vh;
     padding-top: 0;
     padding-bottom: 0;
     z-index: 100;
-    background-color: $navbar_color;
+    background-color: #836960;
 }
 
 #cont{
@@ -14,21 +15,21 @@
 
 #brand{
     font-family: $primary_font;
-    font-size: $font_size;
+    font-size: 5rem;
     padding-top: 0;
     padding-bottom: 2px;
 }
 
 .nav-link{
     color: $white !important;
-    font-family: $primary_font;
     margin-left: 5px !important;
     margin-right: 5px !important;
-    font-size: large !important;
+    font-size: 3rem !important;
+    
+
 }
 
 #logout{
-    font-family: $primary_font;
-    background-color: darkcyan;
-    font-size: initial;
+    
+    font-size: 3rem;
 }

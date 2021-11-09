@@ -50,109 +50,109 @@ class App extends React.Component {
     return (
       <>
         <NavBar
-          isLoggedin={this.state.isLoggedin}
-          user={this.state.user}
-          logoutUser={this.logoutUser}
+          isLoggedin={ this.state.isLoggedin }
+          user={ this.state.user }
+          logoutUser={ this.logoutUser }
         />
 
         <Switch>
           <Route
             exact
             path="/"
-            render={() => (
+            render={ () => (
               <Login
-                isLoggedin={this.state.isLoggedin}
-                user={this.state.user}
+                isLoggedin={ this.state.isLoggedin }
+                user={ this.state.user }
               />
-            )}
+            ) }
           />
 
           <Route
             exact
             path="/register"
-            render={() => (
+            render={ () => (
               <Register
-                isLoggedin={this.state.isLoggedin}
-                user={this.state.user}
+                isLoggedin={ this.state.isLoggedin }
+                user={ this.state.user }
               />
-            )}
+            ) }
           />
 
           <Route
             exact
             path="/login"
-            render={() => (
+            render={ () => (
               <Login
-                isLoggedin={this.state.isLoggedin}
-                loginUser={this.loginUser}
+                isLoggedin={ this.state.isLoggedin }
+                loginUser={ this.loginUser }
               />
-            )}
+            ) }
           />
 
           <Route
             exact
             path="/home"
-            render={() => (
-              <Home isLoggedin={this.state.isLoggedin} user={this.state.user} />
-            )}
+            render={ () => (
+              <Home isLoggedin={ this.state.isLoggedin } user={ this.state.user } />
+            ) }
           />
 
           <Route
             exact
             path="/hotels"
-            render={() => (
+            render={ () => (
               <Hotels
-                isLoggedin={this.state.isLoggedin}
-                user={this.state.user}
+                isLoggedin={ this.state.isLoggedin }
+                user={ this.state.user }
               />
-            )}
+            ) }
           />
 
           <Route
             exact
             path="/bookRoom/:hotel"
-            render={(props) => (
+            render={ (props) => (
               <BookRoom
-                {...props}
-                isLoggedin={this.state.isLoggedin}
-                user={this.state.user}
+                { ...props }
+                isLoggedin={ this.state.isLoggedin }
+                user={ this.state.user }
               />
-            )}
+            ) }
           />
 
           <Route
             exact
             path="/bookings"
-            render={() => (
+            render={ () => (
               <Bookings
-                isLoggedin={this.state.isLoggedin}
-                user={this.state.user}
+                isLoggedin={ this.state.isLoggedin }
+                user={ this.state.user }
               />
-            )}
+            ) }
           />
 
           <Route
             exact
             path="/reschedule/:bookid"
-            render={(props) => (
+            render={ (props) => (
               <Reschedule
-                {...props}
-                isLoggedin={this.state.isLoggedin}
-                user={this.state.user}
+                { ...props }
+                isLoggedin={ this.state.isLoggedin }
+                user={ this.state.user }
               />
-            )}
+            ) }
           />
 
           <Route
             exact
             path="/review/:hotel"
-            render={(props) => (
+            render={ (props) => (
               <ReviewPage
-                {...props}
-                isLoggedin={this.state.isLoggedin}
-                user={this.state.user}
+                { ...props }
+                isLoggedin={ this.state.isLoggedin }
+                user={ this.state.user }
               />
-            )}
+            ) }
           />
         </Switch>
       </>
