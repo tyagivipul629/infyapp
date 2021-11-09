@@ -69,7 +69,7 @@ nav {
   justify-content: flex-start;
 }
 
-.hero .card {
+.hero .booking-card {
   background-color: #eae7e7;
   margin: 4rem;
   width: 40vh;
@@ -89,7 +89,7 @@ nav {
   align-items: center;
 }
 
-.hero .card h3 {
+.hero .booking-card h3 {
   font-size: 3rem;
   color: #836960;
   font-family: cursive;
@@ -97,14 +97,14 @@ nav {
   padding-top: 2rem;
 }
 
-.hero .card h4 {
+.hero .booking-card h4 {
   font-size: 2rem;
   color: #836960;
   font-weight: 500;
   padding-top: 2rem;
 }
 
-.hero .card button {
+.hero .booking-card button {
   margin-top: 3rem;
   background-color: #836960;
   color: white;
