@@ -1,0 +1,33 @@
+@import 'variables';
+
+#navbar{
+    padding-top: 0;
+    padding-bottom: 0;
+    z-index: 100;
+    background-color: $navbar_color;
+}
+
+#cont{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#brand{
+    font-family: $primary_font;
+    font-size: $font_size;
+    padding-top: 0;
+    padding-bottom: 2px;
+}
+
+.nav-link{
+    color: $white !important;
+    font-family: $primary_font;
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+    font-size: large !important;
+}
+
+#logout{
+    font-family: $primary_font;
+    background-color: darkcyan;
+}

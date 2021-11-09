@@ -1,0 +1,19 @@
+@import "variables";
+
+#mainContainer{
+    margin-top: 100px;
+}
+
+.para{
+    font-family: $secondary_font;
+    background-image: url('../assets/images/background1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 30px;
+    padding: 20px;
+    font-weight: 600;
+    color: $navbar_color;
+    border: 10px solid transparent;
+    border-image: url('../assets/images/border.png') 30 stretch;
+}
+
