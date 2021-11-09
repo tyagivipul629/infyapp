@@ -74,7 +74,7 @@ class Register extends React.Component{
     }
 
     render(){
-        //if(this.props.isLoggedin) return <Redirect to="/home" />;
+        if(this.props.isLoggedin) return <Redirect to="/home" />;
         if(this.state.redirect) return <Redirect to="/login" />;
         return(
             <div class="login-box">

@@ -1,14 +1,13 @@
 import React from 'react';
-import {Switch, Route} from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import Register from './components/Register';
 import Login from './components/Login';
 import Home from './components/Home';
-import Hotels from './components/Hotels';
+import Hotels from './components/HotelList/Card';
 import BookRoom from './components/BookRoom';
 import Bookings from './components/Bookings';
 import Reschedule from './components/Reschedule';
-import AddReview from './components/AddReview';
-import ViewReview from './components/ViewReview';
+import ReviewPage from './components/ReviewPage/index';
 import NavBar from './components/Navbar';
 import './sass/App.scss';
 
@@ -33,6 +32,13 @@ class App extends React.Component{
       })
   }
 
+  loginUser=(username)=>{
+    this.setState({
+      isLoggedin: true,
+      user: username
+    })
+  }
+
   logoutUser=()=>{
     this.setState({
       isLoggedin: false,
@@ -49,7 +55,7 @@ class App extends React.Component{
 
         <Route exact path="/register" render={()=><Register isLoggedin={this.state.isLoggedin} user={this.state.user} />} />
 
-        <Route exact path="/login" render={()=><Login isLoggedin={this.state.isLoggedin} user={this.state.user} />} />
+        <Route exact path="/login" render={()=><Login isLoggedin={this.state.isLoggedin} loginUser={this.loginUser} />} />
 
         <Route exact path="/home" render={()=><Home isLoggedin={this.state.isLoggedin} user={this.state.user} />} />
 
@@ -61,9 +67,9 @@ class App extends React.Component{
 
         <Route exact path="/reschedule/:bookid" render={(props)=><Reschedule {...props} isLoggedin={this.state.isLoggedin} user={this.state.user} />} />} />
 
-        <Route exact path="/addReview/:hotel" render={(props)=><AddReview {...props} isLoggedin={this.state.isLoggedin} user={this.state.user} />} />
+        <Route exact path="/addReview/:hotel" render={(props)=><ReviewPage {...props} isLoggedin={this.state.isLoggedin} user={this.state.user} />} />
 
-        <Route exact path="/viewReview/:hotel" render={(props)=><ViewReview {...props} isLoggedin={this.state.isLoggedin} user={this.state.user} />} />
+        <Route exact path="/viewReview/:hotel" render={(props)=><ReviewPage {...props} isLoggedin={this.state.isLoggedin} user={this.state.user} />} />
       </Switch></>
       
     );

@@ -1,0 +1,80 @@
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 91vh;
+  }
+  .card {
+    width: 45rem;
+    min-height: 35rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.418);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+  }
+  .hotel-details {
+    height: 13rem;
+    overflow: auto;
+  }
+  .hname {
+    color: rgb(255, 111, 111);
+  }
+  .amen {
+    font-size: medium;
+    color: rgb(143, 143, 143);
+  }
+  .layout {
+    display: flex;
+    justify-content: space-between;
+  }
+  .glass {
+    background-color: rgba(233, 233, 233, 0.514);
+    backdrop-filter: blur(2px);
+  }
+  img {
+    border-radius: 50%;
+  }
+  .data-cont {
+    text-align: center;
+    margin-left: 1rem;
+  }
+  textarea {
+    resize: none;
+    border-radius: 3px;
+    width: 100%;
+    padding: 0.4rem;
+    border: rgb(106, 198, 252) 2px dotted;
+  }
+  textarea :focus-visible {
+    outline: 2px solid blue !important;
+  }
+  :focus-visible {
+    border: rgb(106, 198, 252) 2px solid;
+    outline: none;
+  }
+  .butn {
+    margin-top: 3px;
+  }
+  .review-list {
+    list-style: circle;
+  }
+  button {
+    outline: none;
+    border: none;
+    background-color: #32ddf5;
+    border-radius: 2px;
+    padding: 3px 6px;
+  }
+  
+  button:hover {
+    background-color: #00aac0;
+  }
+  
+  section {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.418);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+  
