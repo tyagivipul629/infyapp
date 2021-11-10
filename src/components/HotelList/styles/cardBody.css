@@ -59,6 +59,9 @@ nav {
 }
 
 .hotel-card .logo {
+  background-image: url("./insideCircle.jpg");
+  background-size: cover;
+
   -webkit-box-flex: 1;
   -ms-flex: 1 1 20rem;
   flex: 1 1 20rem;

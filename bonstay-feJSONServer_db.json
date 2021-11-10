@@ -31,6 +31,14 @@
       "email": "daisy@gmail.com",
       "password": "Daisy@123",
       "id": 4
+    },
+    {
+      "name": "cristiano",
+      "password": "qwertyuiop",
+      "email": "qwertyuiop",
+      "phoneNo": "1234567891",
+      "address": "Maderia,Portual",
+      "id": 5
     }
   ],
   "hotels": [
@@ -51,7 +59,8 @@
         "new review",
         "new review",
         "Best place to relax with friends and family",
-        "Best place to relax with friends and family"
+        "Best place to relax with friends and family",
+        "Paleness near palm\n"
       ]
     },
     {
