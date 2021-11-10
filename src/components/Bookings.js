@@ -3,10 +3,22 @@ import React, { Component, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../sass/Booking.css";
 
-const Bookings = () => {
+const Bookings = (props) => {
   const [bookings, setBookings] = useState([]);
+  console.log(props.user);
+  let getuserid = async () =>{
+    let query = "http://localhost:1111/users?name="+props.user;
+    const userdata = await axios.get(query);
+    console.log(userdata.data[0].id);
+    return userdata.data[0].id;
+  }
+  
   useEffect(async () => {
-    const { data } = await axios.get("http://localhost:1111/bookings");
+    let userid = await getuserid();
+    console.log(userid);
+    let query2 = "http://localhost:1111/bookings?userId="+userid;
+    const { data } = await axios.get(query2);
+    console.log(data);
     setBookings(data);
   }, []);
   return (
