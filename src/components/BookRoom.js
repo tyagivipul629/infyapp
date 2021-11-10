@@ -1,5 +1,6 @@
-import { Redirect } from "react-router";
+import { Redirect , useParams } from "react-router";
 import useInput from "../hooks/use-input";
+import axios from "axios";
 
 var startDate;
 const userDetails = [];
@@ -117,7 +118,25 @@ const BookRoom = (props) => {
     formIsValid = true;
   }
 
-  const submitHandler = (event) => {
+  const p = useParams();
+  //console.log(p.hotel);
+
+  let getuserid = async () =>{
+    let query = "http://localhost:1111/users?name="+props.user;
+    const userdata = await axios.get(query);
+    console.log(userdata.data[0].id);
+    return userdata.data[0].id;
+  }
+
+  let gethotelname = async () =>{
+    let query = "http://localhost:1111/hotels?id="+p.hotel;
+    const userdata = await axios.get(query);
+    console.log(userdata.data[0].hotelName);
+    return userdata.data[0].hotelName;
+  }
+
+
+  const submitHandler = async (event) => {
     event.preventDefault();
 
     if (!formIsValid) {
@@ -131,13 +150,16 @@ const BookRoom = (props) => {
       Lastname: lastNameValue,
       EmailId: emailValue,
       HotelName: "Paradise Stay",
-      PersonsBooked: noOfPersonsValue,
-      RoomsBooked: noOfRoomsValue,
-      DateofBooking: startDateValue,
-      DateofLeaving: endDateValue,
-      RoomType: roomTypeValue,
+      noOfPersons: noOfPersonsValue,
+      noOfRooms: noOfRoomsValue,
+      startDate: startDateValue,
+      endDate: endDateValue,
+      typeOfRoom: roomTypeValue,
     });
     console.log(userDetails);
+
+    let usrid = await getuserid();
+    let hname = await gethotelname();
 
     fetch("http://localhost:1111/bookings", {
       method: "POST",
@@ -149,12 +171,14 @@ const BookRoom = (props) => {
         FirstName: firstNameValue,
         Lastname: lastNameValue,
         EmailId: emailValue,
-        HotelName: "Paradise Stay",
-        PersonsBooked: noOfPersonsValue,
-        RoomsBooked: noOfRoomsValue,
-        DateofBooking: startDateValue,
-        DateofLeaving: endDateValue,
-        RoomType: roomTypeValue,
+        hotelId: p.hotel,
+        userId:   usrid,
+        hotelName: hname,
+        noOfPersons: noOfPersonsValue,
+        noOfRooms: noOfRoomsValue,
+        startDate: startDateValue,
+        endDate: endDateValue,
+        typeOfRoom: roomTypeValue,
       }),
     })
       .then((res) => {
@@ -336,4 +360,5 @@ const BookRoom = (props) => {
 };
 
 export default BookRoom;
+
 export { userDetails };
