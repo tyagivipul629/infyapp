@@ -42,6 +42,22 @@ nav {
   background-color: black;
 }
 
+body {
+  body {
+    margin: 0;
+    background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from(rgba(0, 0, 0, 0.8)),
+        to(transparent)
+      ),
+      url("../components/HotelList/styles/BackgroundImage-card.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.8), transparent),
+      url("../components/HotelList/styles/BackgroundImage-card.jpg");
+  }
+}
+
 // Variable Declaration
 
 $primary-color: #836960;

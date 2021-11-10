@@ -12,19 +12,19 @@ const Bookings = () => {
   return (
     <div>
       <div class="hero">
-        {bookings.map((booking, index) => {
+        { bookings.map((booking, index) => {
           return (
-            <div key={index} class="booking-card">
-              <h4>{booking.hotelName}</h4>
-              <h4>Start Date:{booking.startDate}</h4>
-              <h4>End Date:{booking.endDate}</h4>
-              <h4>Number of person:{booking.noOfPersons}</h4>
-              <Link to={`/reschedule/${booking.id}`}>
+            <div key={ index } class="booking-card">
+              <h4>{ booking.hotelName }</h4>
+              <h4>Start Date:{ booking.startDate }</h4>
+              <h4>End Date:{ booking.endDate }</h4>
+              <h4>Number of person:{ booking.noOfPersons }</h4>
+              <Link to={ `/reschedule/${booking.id}` }>
                 <button>Reschedule</button>
               </Link>
             </div>
           );
-        })}
+        }) }
       </div>
     </div>
   );
